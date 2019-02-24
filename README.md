@@ -24,7 +24,7 @@ Right click on the project click Run As > Maven build..
 on the Edit configuration popup write <code> clean install </code> on the Goal input filed then click Run
 one the build successfully executed
 
-Click Run As > Spring Boot App
+Click Run As > Spring Boot App once complete
 
 then access the application using http://localhost:8080/remindalerter/ url
 
