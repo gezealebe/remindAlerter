@@ -16,20 +16,17 @@ unzip the file to a destination of your choice. Then add the location in to you 
   - eclipse - https://www.eclipse.org/downloads/
 <h4>* Open the project from your IDE </h4>
 After you clone this project form github please follow the following steps to run the application locally
+If you have not install git follow this link to downloadand install https://git-scm.com/download/win
 
 To clone the project please run the following command using your command prompt
 
-<code> git clone https://github.com/gezealebe/remindAlerter.git </code>
+git clone https://github.com/gezealebe/remindAlerter.git
 
 then check out develop branch
 
-<code> git checkout develop</code>
+git checkout develop
 
-if you have not install git follow this link to downloadand install https://git-scm.com/download/win
-In eclipse or sts click File > Import > Existing Maven Projects > then open the project you check out form github.
-Right click on the project click Run As > Maven build.. 
-on the Edit configuration popup write <code> clean install </code> on the Goal input filed then click Run
-one the build successfully executed
+In eclipse or sts click File > Import > Existing Maven Projects > then open the project you check out form github. Right click on the project click Run As > Maven build.. on the Edit configuration popup write clean install on the Goal input filed then click Run one the build successfully executed
 
 Click Run As > Spring Boot App once complete
 
