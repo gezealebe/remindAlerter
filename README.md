@@ -18,8 +18,11 @@ unzip the file to a destination of your choice. Then add the location in to you 
 After you clone this project form github please follow the following steps to run the application locally
 
 To clone the project please run the following command using your command prompt
+
 <code> git clone https://github.com/gezealebe/remindAlerter.git </code>
+
 then check out develop branch
+
 <code> git checkout develop</code>
 
 if you have not install git follow this link to downloadand install https://git-scm.com/download/win
