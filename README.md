@@ -33,7 +33,7 @@ one the build successfully executed
 
 Click Run As > Spring Boot App once complete
 
-then access the application using http://localhost:8080/remindalerter/ url
+Then access the application using http://localhost:8080/remindalerter/ url
 
 
 
