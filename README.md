@@ -16,8 +16,14 @@ unzip the file to a destination of your choice. Then add the location in to you 
   - eclipse - https://www.eclipse.org/downloads/
 <h4>* Open the project from your IDE </h4>
 After you clone this project form github please follow the following steps to run the application locally
-to check out please run the following command using your command prompt
-<code> https://github.com/gezealebe/remindAlerter.git </code>
+
+To clone the project please run the following command using your command prompt
+
+<code> git clone https://github.com/gezealebe/remindAlerter.git </code>
+
+then check out develop branch
+
+<code> git checkout develop</code>
 
 if you have not install git follow this link to downloadand install https://git-scm.com/download/win
 In eclipse or sts click File > Import > Existing Maven Projects > then open the project you check out form github.
