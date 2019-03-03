@@ -4,20 +4,29 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>home</title>
- <link href="../webjars/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
- <script src="../webjars/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
- <script src="../webjars/jquery/3.0.0/js/jquery.min.js" ></script>
+<title>Home</title>
+ <script type="text/javascript" src="webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+ <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0/css/bootstrap.min.css" />
+ <link rel="stylesheet" type="text/css" href="resources/css/common.css" />
 </head>
 <body>
- <div class="container"> 
+ <div class="container container-custom"> 
     <h2>
-      This is the remindalerter Main page
+      Welcome to remindalerter Main page
     </h2>
-    
-    <p>Click here <a href="/remindalerter/login" target="_blank"> Login </a>
-    <p>Click here <a href="/remindalerter/register" target="_blank"> Registration</a>
-    </p>  
+   <p> This site is used to setup a reminder alert to a different occassion. It will allow you to create edit and delete different reminders.
+   </p>
+   </br>
+   <p> Please select one of the following action</p>
+   
+    	   </br>
+      <div class="action-list">
+	   <button type="button" class="btn btn-primary" onclick="location.href='addreminder'">Add new reminder</button>
+	   	    <br></br>
+	   <button type="button" class="btn btn-primary" onclick="location.href='editreminder'">Edit a reminder</button>
+	   	    <br></br>
+	   <button type="button" class="btn btn-primary" onclick="location.href='deletereminder'">Delete a reminder</button>
+	  </div>
  </div>
 </body>
 </html>

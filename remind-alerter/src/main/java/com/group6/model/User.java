@@ -1,12 +1,15 @@
 package com.group6.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -30,27 +33,18 @@ public class User {
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="password")
+	private String password;
+	
 	@Column(name="phone")
 	private String phone;
 	
 	@Column(name="birthDate")
 	private LocalDate birthDate;
 
-		
-	public User() { 
-	}
-
-	public User(Integer id, String userName, String firstName, String lastName, String email, String phone,
-			LocalDate birthDate) {
-		super();
-		this.id = id;
-		this.userName = userName;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.phone = phone;
-		this.birthDate = birthDate;
-	}
+    @ManyToMany
+    @JoinTable(name="user_contact")
+	private List <Contact> contacts;
 
 	public Integer getId() {
 		return id;
@@ -92,6 +86,14 @@ public class User {
 		this.email = email;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public String getPhone() {
 		return phone;
 	}
@@ -106,6 +108,14 @@ public class User {
 
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
+	}
+
+	public List<Contact> getContacts() {
+		return contacts;
+	}
+
+	public void setContacts(List<Contact> contacts) {
+		this.contacts = contacts;
 	}
 
 	@Override
