@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,10 +25,10 @@ public class UserContorller {
 	
 	@Autowired
 	public UserService userService;
-	 @RequestMapping("/")
+	/* @RequestMapping("/")
 	 public String mainPage() { 
-		 return "home";
-	 }
+		 return "list";
+	 } */
 	 
 	 @RequestMapping("/err")
 	 public String errorPage() { 
@@ -59,15 +60,15 @@ public class UserContorller {
 			  userService.saveUser(user); 
 			  return new ModelAndView("redirect:/");
 		 }  
-		 model.addAttribute("userName", "The user name exist");
+		 
+		 model.addAttribute("error", "The user name exist");
 		return new ModelAndView("redirect:/register");
 	 }	 
 	 
 	 @RequestMapping(value="/login/user", method=RequestMethod.POST)        
-	 public ModelAndView login(@ModelAttribute("login") Login user) {
+	 public ModelAndView login(@ModelAttribute("login") Login user, ModelMap map) {
  
-		// System.out.println("*******" + user.getUserName());
-		// System.out.println("*******" + user.getPassword());
+		 map.addAttribute("error", "Wrong username and/or password"); 
 		 userService.loginUser(user.getUserName(), user.getUserName()); 
 		 
 	  return new ModelAndView("redirect:/");

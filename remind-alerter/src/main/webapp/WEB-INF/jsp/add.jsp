@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"></jsp:include>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,9 +14,11 @@
  <link rel="stylesheet" type="text/css" href="resources/css/common.css" />
 </head>
 <body>
+ 
   <div class="container container-custom">
 	<spring:url value="/addreminder" var="saveURL" />
-	  <h2>Add a new person for reminder</h2>
+	  <h2>Add Reminder</h2>
+	  <br></br>
 	  <form:form modelAttribute="addForm" method="post" action="${saveURL }" cssClass="form"> 
 	   <div class="form-group">
 	    <lable for="firstName">First Name</lable>
@@ -39,18 +42,22 @@
 	   </div>
 	   <div class="form-group">
 	    <lable for="remindDate">Remind before Date</lable>
-	    <form:input path="remindDate" class="form-control" id="email" type="email"/>
+	    <form:input path="remindDate" class="form-control" id="email" type="number"/>
 	   </div>	   
 	   <div class="form-group">
 	    <lable for="reminderTypes">Reminder Type</lable>
 	    <form:select path="reminderTypes" class="form-control" >
 	       <form:option value="birthDay">Birth Day </form:option> 
 	       <form:option value="anniversary">Anniversary </form:option> 
+	       <form:option value="anniversary">Others </form:option> 
 	     </form:select>
 	   </div>
 	   
-	    <br></br>
-	   <button type="submit" class="btn btn-primary register-button">Add User</button>
+	   	    <br></br>
+	   <div class="register-button">
+	   	   <button type="button" onclick="location.href='home'" class="btn btn-accent ">Cancel</button>  
+	       <button type="submit" class="btn btn-primary ">Add Reminder</button>
+	   </div> 
 	  </form:form>
  </div>
 </body>

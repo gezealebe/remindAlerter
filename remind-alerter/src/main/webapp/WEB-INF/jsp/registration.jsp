@@ -10,12 +10,16 @@
 <title>Registration</title>  
  <script type="text/javascript" src="webjars/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
  <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0/css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+ <link rel="stylesheet" type="text/css" href="resources/css/common.css" /> 
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 </head>
 <body>
   <div class="container container-custom">
 	<spring:url value="/register/user" var="saveURL" />
-	  <h2>User Registration Form</h2>
+	  <h2>User Registration Form</h2>	  	   
+	  <c:if test="${not empty param.error}">
+	    <div class="alert alert-error"> ${error}</div>
+	  </c:if>
 	  <form:form modelAttribute="userForm" method="post" action="${saveURL }" cssClass="form">
 	   <form:hidden path="id"/>
 	   <div class="form-group">

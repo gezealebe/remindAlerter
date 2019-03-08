@@ -1,6 +1,7 @@
 package com.group6.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -36,9 +37,9 @@ public class Contact {
 	
 	@Column(name="reminderTypes")
     private String reminderTypes;
-    
-	@ManyToMany(mappedBy="contacts")	
-	private List <User> user;
+
+	@Column(name="userId")
+    private String userId;
 
 	public Long getId() {
 		return id;
@@ -96,12 +97,12 @@ public class Contact {
 		this.reminderTypes = reminderTypes;
 	}
 
-	public List<User> getUser() {
-		return user;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUser(List<User> user) {
-		this.user = user;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	
 }

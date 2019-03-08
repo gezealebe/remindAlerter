@@ -9,3 +9,36 @@
 .action-list {
 	padding-left:100px;
 }
+
+.header-tab{
+    height: 100px;
+    background-color: #05247bbd !important;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+	
+}
+
+.description-title {
+    font-size: 30px;
+    padding: 30px;
+}
+
+.action-list {
+	float: right;
+}
+
+.description_title {
+   font-size: 20px;
+   font-style: italic;
+}
+
+.container {
+	    padding-top: 120px;
+}
