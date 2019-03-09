@@ -1,12 +1,18 @@
 package com.group6.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +22,7 @@ public class User {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id")
-	private Integer id;
+	private Long id;
 	
 	@Column(name="userName")
 	private String userName;
@@ -30,33 +36,20 @@ public class User {
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="password")
+	private String password;
+	
 	@Column(name="phone")
 	private String phone;
 	
 	@Column(name="birthDate")
 	private LocalDate birthDate;
-
-		
-	public User() { 
-	}
-
-	public User(Integer id, String userName, String firstName, String lastName, String email, String phone,
-			LocalDate birthDate) {
-		super();
-		this.id = id;
-		this.userName = userName;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.phone = phone;
-		this.birthDate = birthDate;
-	}
-
-	public Integer getId() {
+ 
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -90,6 +83,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getPhone() {
